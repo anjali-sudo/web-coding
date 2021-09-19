@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<style type="text/css">
+		.main-div{
+			background:linear-gradient(rgb(47,184,223),rgb(47,184,223),rgb(40,235,35));
+			
+		}
+		.one{
+			border-radius:30px;
+			background-color:white;
+		}
+		.top_b1,.top_b3,.top_b5{
+
+			background-color:rgb(244,244,244);
+			border-radius: 50px;
+		}
+		.address{
+
+			background-color:rgb(244,244,244);
+			border-radius: 20px;
+		}
+		.address .text{
+			display: flex;
+			justify-content: center;/*
+			border:1px solid;*/
+		}
+		.address .text input{
+			width:70%;
+			font-size:20px;
+			border-radius: 50px;
+			border:1px solid gray;
+			outline:none;
+			padding-left:10px;
+		}
+		.address div i{
+			color:blue;
+		} 
+		.checkbox{
+
+			background-color:rgb(244,244,244);
+			border-radius: 20px;
+		}
+		.items{
+			background-color:rgb(244,244,244);
+			border-radius: 20px;
+		}
+	</style>
+</head>
+<body>
+
+
+	<div class='container-fluid main-div'>
+		<div class='row'>
+			<div class='col-12'>
+				<p class='h1'>×</p>
+			</div>
+		</div>
+		<div class='row p-2 one'>
+
+			<div class='col-12 mt-3 mb-4 d-flex justify-content-center'>
+				<button type="button" class="btn btn-fb top_b1">
+					<i class="fas fa-shopping-cart"></i>
+				</button>
+				<button type="button" class="btn btn-fb top_b2">
+					<i class="fas fa-long-arrow-alt-right"></i>
+				</button>
+				<button type="button" class="btn btn-fb top_b3">
+					<i class="far fa-id-badge"></i>
+				</button>
+				<button type="button" class="btn btn-fb top_b4">
+					<i class="fas fa-long-arrow-alt-right"></i>
+				</button>
+				<button type="button" class="btn btn-fb top_b5">
+					<i class="fas fa-rupee-sign"></i>
+				</button>
+			</div>
+			<div class='col-12 address p-3 pb-4 mb-4'>
+				<br>
+				<div class="ml-4">
+					<i class="far fa-circle fa-lg" id='ma'></i>
+				</div>
+				<br>
+				<div class="text"> 
+					<input type="text t1" id='t1' name="t1" placeholder="+  Add new Address" onfocus="one()">
+				</div>
+					
+				
+			</div>
+			<div class='col-12 checkbox p-3  d-flex justify-content-center'>
+				<div class='row ' style='width:80%'>
+					<div class='col-2 d-flex justify-content-center align-items-center'>
+						<p class='h2'><i class="fab fa-whatsapp "></i></p>
+					</div>
+					<div class='col-8 d-flex justify-content-center align-items-center'>
+						<p class='h5'>Enable order updates and important information on whats app</p>
+					</div>
+					<div class='col-2 d-flex justify-content-center align-items-center'>
+						<p class='h1'><input type="checkbox" name="ch" style='width:20px; height:20px'></p>
+					</div>
+					
+				</div>
+			</div>
+			<div class='col-12  p-4  d-flex justify-content-between'>
+				<div><p class="h3">Groceries Basket</p></div>
+				<div><p class="h3">Total Items</p></div>
+			</div>
+
+			<div class='col-12 items p-3 '>
+				<div class='row'>
+					<div class='col-6'>
+						<div class="card text-center">
+						  <img src="2.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Apples-Shimla</h5>
+						    
+							    <p class='h6'>3 pcs(500gm approx)</p>
+								<p class='h5'  style='color:green'>In stock</p>
+								<p class='h6'><i class="fas fa-rupee-sign"></i> 110.00</p>
+							<br>
+							<table class="table">
+							  <tbody>
+							    <tr>
+							      <td>
+							      	<button type="button" class="btn btn-fb top_b5" value='Apples-Shimla' onclick="two(this.value,1)">
+										<i class="fas fa-plus-circle" style='color:orange;'></i>
+									</button>
+								  </td>
+							      <td><p id="m1">1</p></td>
+							      <td>
+							      	<button type="button" class="btn btn-fb top_b5" value='Apples-Shimla' onclick="two(this.value,2)" id='sub1'>
+										<i class="fas fa-minus-circle" style='color:orange;'></i>
+									</button>
+								  </td>
+							    </tr>
+							  </tbody>
+							</table>
+						  </div>
+						</div>
+					</div>
+					<div class='col-6'>
+						<div class="card text-center">
+						  <img src="3.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Brown Eggs</h5>
+						    
+							    <p class='h6'>Tray(6 pcs)</p>
+								<p class='h5' style='color:green'>In stock</p>
+								<p class='h6'><i class="fas fa-rupee-sign"></i> 80.00</p>
+								<br>
+							<table class="table">
+							  <tbody>
+							    <tr>
+							      <td>
+							      	<button type="button" class="btn btn-fb top_b5" value='Brown Eggs' onclick="two(this.value)">
+										<i class="fas fa-plus-circle" style='color:orange;'></i>
+									</button>
+								  </td>
+							      <td><p id="m2">1</p></td>
+							      <td>
+							      	<button type="button" class="btn btn-fb top_b5" id='sub2' value='Brown Eggs' onclick="two(this.value)">
+										<i class="fas fa-minus-circle" style='color:orange;'></i>
+									</button>
+								  </td>
+							    </tr>
+							  </tbody>
+							</table>
+
+						  </div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+
+			<div class='col-12 p-2'>
+				<hr>
+
+			</div>
+			<div class='col-12  pl-4 d-flex justify-content-between'>
+			
+				<div><p class="h3"><i class="fas fa-rupee-sign"></i><span id='total'> 190.00</span></p></div>
+				<div style="width:30%;">
+					<button type="button" class="btn btn-success" style="width:100%;">Make Payment</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var x=1,y=1;
+		var pri=190;
+		var url=new URL(location.href);
+		if(url!='file:///C:/Users/Gourav%20kumar/Desktop/cart.html')
+		{
+			a1=url.searchParams.get('add');
+			
+			document.getElementById('t1').value = a1;
+			document.getElementById('ma').classList="";
+			document.getElementById('ma').classList="fas fa-circle fa-lg";
+
+		}
+		function one()
+		{
+			location.href='address.html'
+		}
+		function two(a,b)
+		{
+
+			if(a=='Apples-Shimla')
+			{
+				if(b==2 && x==1)
+				{
+					
+				}
+				else
+				{
+					b==1?x++:x--;
+					if(b==1)
+					{
+						pri+=110;
+					}
+					else
+					{
+						pri-=110;
+					}
+				}
+			}
+			if(a=='Brown Eggs')
+			{
+				if(b==2 && y==1)
+				{
+					
+				}
+				else
+				{
+					b==1?y++:y--;
+					if(b==1)
+					{
+						pri+=80;
+					}
+					else
+					{
+						pri-=80;
+					}
+				}
+			}
+
+			document.getElementById('total').innerHTML=pri;
+			document.getElementById('m1').innerHTML=x;
+			document.getElementById('m2').innerHTML=y;
+
+		}
+	</script>
+</body>
+</html>

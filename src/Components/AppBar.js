@@ -20,7 +20,7 @@ export default function ButtonAppBar() {
             </Link>
             <AccessAlarm/>
             
-          Title Goes Here
+          jio mart
             
         </Toolbar>
       </AppBar>

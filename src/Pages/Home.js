@@ -1,18 +1,24 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import DatePickers from '../Components/DateTimePicker';
+
+import SwipeableTextMobileStepper from '../Components/Jiomarthomepage/Carousele';
+import ContainedButtons from '../Components/Jiomarthomepage/ContainedButtons';
+import AutoGridNoWrap from '../Components/Maxsavingdeal';
 
 export default function Home() {
   return (
     <React.Fragment>
         <Container fixed>
+            
             <p>
-                Welcome to your web application. Make something beautiful!
+                
             </p>
-            <p>
-                To get started, edit <code>src/App.js</code>, save, and reload this page.
-            </p>
-            <DatePickers/>
+           
+            <ContainedButtons/>
+          < SwipeableTextMobileStepper/>
+          < SwipeableTextMobileStepper/>
+          < SwipeableTextMobileStepper/>
+          <AutoGridNoWrap/>
         </Container>
     </React.Fragment>
   );
