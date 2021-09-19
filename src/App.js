@@ -5,7 +5,8 @@ import Home from './Pages/Home.js'
 import Gallery from './Pages/Gallery.js'
 import PrimarySearchAppBar from './Components/Jiomarthomepage/Serchbar';
 import Ordersummary from './Pages/Ordersummary'
-
+import Address from './Pages/Address'
+import Final from './Pages/Final'
 
 function App() {
   return (
@@ -20,11 +21,13 @@ function App() {
             <Route path={process.env.PUBLIC_URL + '/'} exact > <Home/> </Route>
             <Route path={process.env.PUBLIC_URL + '/home'} > <Home/> </Route>
             <Route path={process.env.PUBLIC_URL + '/gallery'}  > <Gallery/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/Ordersummary'}  > <Ordersummary/> </Route>
+            <Route path={process.env.PUBLIC_URL + '/ordersummary'}  > <Ordersummary/> </Route>
+            <Route path={process.env.PUBLIC_URL + '/Address'}  > <Address/> </Route>
+            <Route path={process.env.PUBLIC_URL + '/Final'}  > <Final/> </Route>
           </Switch>
 
       <footer className="App-footer">
-        This is a footer
+        
       </footer>
     </div>
   );
