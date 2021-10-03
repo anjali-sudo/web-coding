@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import {Link, Router} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,6 +20,7 @@ export default function ContainedButtons() {
       <Button variant="contained" color="secondary">
         Grocery
       </Button>
+
       <Button variant="contained" color="secondary">
         Home and kitchen
       </Button>
@@ -39,5 +41,6 @@ export default function ContainedButtons() {
         Medicine
       </Button>
     </div>
+    
   );
 }

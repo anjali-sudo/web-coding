@@ -8,33 +8,32 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
- 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
- 
 const tutorialSteps = [
   {
-    
+   
     imgPath:
-      'https://cdn.flipshope.com/blog/wp-content/uploads/2020/10/Jiomart-wednesday-offers-and-deals-800x450.jpg' ,
-      
-  },
-  {
-     imgPath:
-      'http://educratsweb.com/l.php?url=https://www.jiomart.com/images/cms/aw_rbslider/slides/1589897178_banner_05.jpg' ,
-  },
-  {
-    imgPath:
-      'http://educratsweb.com/l.php?url=https://www.jiomart.com/images/cms/aw_rbslider/slides/1589897133_banner_04.jpg'
-  },
-  {
- 
-    imgPath:
-      'https://english.cdn.zeenews.com/sites/default/files/2020/11/02/896776-jiomart.jpg',
+      'http://educratsweb.com/l.php?url=https://www.jiomart.com/images/cms/aw_rbslider/slides/1590177884_491551662.jpg',
   },
   {
     
     imgPath:
-      'https://cdn.static-zoutons.com/images/originals/blog/BANNER4_1605856907.jpg',
+      'https://www.jiomart.com/images/cms/aw_rbslider/slides/1590178009_491491289.jpg',
+  },
+  {
+   
+    imgPath:
+      'https://www.jiomart.com/images/cms/aw_rbslider/slides/1590172163_490915877.jpg',
+  },
+  {
+    
+    imgPath:
+      'https://www.jiomart.com/images/cms/aw_rbslider/slides/1589896887_banner_07.jpg',
+  },
+  {
+   
+    imgPath:
+      'https://www.jiomart.com/images/cms/aw_rbslider/slides/1590172121_490249971.jpg',
   },
 ];
  
@@ -46,23 +45,20 @@ const useStyles = makeStyles((theme) => ({
   header: {
     display: 'flex',
     alignItems: 'center',
-    height: 10,
+    height: 50,
     paddingLeft: theme.spacing(4),
     backgroundColor: theme.palette.background.default,
   },
   img: {
-    
-   
-    height: 250,
-    display: 'block',
+    height: 255,
     maxWidth: 400,
     overflow: 'hidden',
+    display: 'block',
     width: '100%',
-    
   },
 }));
  
- function SwipeableTextMobileStepper() {
+export default function Carousel2() {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -75,16 +71,17 @@ const useStyles = makeStyles((theme) => ({
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
- 
   const handleStepChange = (step) => {
     setActiveStep(step);
   };
+ 
  
   return (
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
+      
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -99,30 +96,28 @@ const useStyles = makeStyles((theme) => ({
           </div>
         ))}
       </AutoPlaySwipeableViews>
+ 
       <MobileStepper
-        variant="dots"
-        steps={5}
-        position="static"
-        activeStep={activeStep}
-        className={classes.root}
-        nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
-            
-            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-          </Button>
-        }
-        backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            
-          </Button>
-  
+       variant="dots"
+       steps={5}
+       position="static"
+       activeStep={activeStep}
+       className={classes.root}
+       nextButton={
+         <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
+           
+           {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+         </Button>
+       }
+       backButton={
+         <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+           {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+           
+         </Button>
         }
       />
     </div>
   );
 }
- 
-export default SwipeableTextMobileStepper;
  
 

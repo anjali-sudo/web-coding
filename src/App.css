@@ -10,6 +10,11 @@
   background-color: #282c34;
   color: white;
 }
+img {
+  border-radius: 55px 55px 55px 55px;
+  
+}
+
 
 .App-footer {
   background-color: #282c34;

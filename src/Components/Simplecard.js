@@ -5,6 +5,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Link, Router } from "react-router-dom";
+
 
 const useStyles = makeStyles({
   root: {
@@ -33,9 +35,13 @@ export default function SimpleCard() {
         <Typography className={classes.title} color="textSecondary" gutterBottom>
           
         </Typography>
-        <Typography variant="h5" component="h2">
-          +Add New Address
-        </Typography>
+        <Link to={process.env.PUBLIC_URL + '/Address'}>
+       
+
+       <Button variant="outlined">Add new address </Button>
+      
+</Link>
+
         <Typography className={classes.pos} color="textSecondary">
           
         </Typography>
@@ -45,9 +51,7 @@ export default function SimpleCard() {
           
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+      
     </Card>
   );
 }

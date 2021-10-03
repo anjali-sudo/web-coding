@@ -26,9 +26,9 @@ function App() {
             <Route path={process.env.PUBLIC_URL + '/Final'}  > <Final/> </Route>
           </Switch>
 
-      <footer className="App-footer">
+      {/* <footer className="App-footer">
         
-      </footer>
+      </footer> */}
     </div>
   );
   }
