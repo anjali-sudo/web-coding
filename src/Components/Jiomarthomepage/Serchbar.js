@@ -22,6 +22,21 @@ const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
   },
+  
+  AppBar: {
+    padding: '5%',
+    background: 'linear-gradient(to bottom ,#0192CA, #0CAEBE, #13BEB7,#21DFA8)',
+    
+    // borderStyle: 'solid none solid none',
+    // borderColor: '#B1B1B1',
+    boxShadow: '0 0 0 0',
+    border:'2 solid red',
+    borderRadius: '5',
+    height:'20ch'
+   
+  },
+
+
   menuButton: {
     marginRight: theme.spacing(0),
   },
@@ -35,9 +50,9 @@ const useStyles = makeStyles((theme) => ({
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    backgroundColor: 'white',
     '&:hover': {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
+      backgroundColor: 'white',
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
@@ -55,9 +70,11 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    color: 'grey',
+
   },
   inputRoot: {
-    color: 'inherit',
+    color: 'grey',
   },
   inputInput: {
     padding: theme.spacing(1, 2, 1, 1),
@@ -124,9 +141,14 @@ export default function PrimarySearchAppBar() {
     return (
 
       <div className={classes.grow}>
-        <AppBar position="static" minHeight="400" >
+        <AppBar position="static" className={classes.AppBar}
+>
+
           <Toolbar
           >
+            <Grid container spacing={2}>
+            <Grid item xl={1} xs={2}>
+
             <IconButton
               edge="start"
               className={classes.menuButton}
@@ -135,7 +157,9 @@ export default function PrimarySearchAppBar() {
             >
               <SwipeableTemporaryDrawer/>
             </IconButton>
+            </Grid>
 
+            <Grid item xl={6} xs={5}>
 
             <div>
               <Typography className={classes.title} variant="h6" noWrap>
@@ -143,24 +167,10 @@ export default function PrimarySearchAppBar() {
               </Typography>
               {/* <img src = {jio-mart-logo} className= "image" alt= "Logo"/> */}
             </div>
+            </Grid>
 
-
-            <div className={classes.search}>
-              <div className={classes.searchIcon}
-              >
-                <SearchIcon />
-
-              </div>
-              <InputBase
-                placeholder="Search essentials..."
-                classes={{
-                  root: classes.inputRoot,
-                  input: classes.inputInput,
-                  position: 'bottm',
-                }}
-                inputProps={{ 'aria-label': 'search' }}
-              />
-            </div>
+            <Grid item xl={1} xs={2}>
+            
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
             </div>
@@ -173,7 +183,8 @@ export default function PrimarySearchAppBar() {
                 <AccountCircle/>
               </IconButton>
             </div>
-
+            </Grid>
+            <Grid item xl={1} xs={2}>
             <div>
               <IconButton aria-label="show 4 new mails" color="inherit">
               <Link to={process.env.PUBLIC_URL + '/Ordersummary'}>
@@ -183,9 +194,30 @@ export default function PrimarySearchAppBar() {
 
               </IconButton>
             </div>
+            </Grid>
+
+            <div className={classes.search}>
+              <div className={classes.searchIcon}
+              >
+                <SearchIcon />
+
+              </div>
+              
+              <InputBase
+                placeholder="Search essentials..."
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                  position: 'bottm',
+                }}
+                inputProps={{ 'aria-label': 'search' }}
+              />
+            </div>
+            </Grid>
           </Toolbar>
         </AppBar>
       </div>
+      
     );
   }
   return (
