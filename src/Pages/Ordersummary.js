@@ -8,6 +8,8 @@ import ComplexGrid from '../Components/product';
 import FullWidthGrid from '../Components/Payment';
 import HorizontalNonLinearStepperWithError from '../Components/Stepper';
 import ComplexGrid2 from '../Components/ComplexGrid';
+import ComplexGridd from '../Components/Product 2';
+import Grid from '@material-ui/core/Grid';
 
 
 
@@ -26,9 +28,18 @@ export default function Ordersummary() {
             <HorizontalNonLinearStepperWithError/>
            
             <SimpleCard/>
-            Grocery basket                                 total iteams 
+            Grocery basket 
+            <Grid container spacing={2}align= 'center'>
+           <Grid item xs={12}sm={12}xl={12}>                                total iteams 
             <ComplexGrid2/>
-            <ComplexGrid2/>
+            </Grid>
+            </Grid>
+            <Grid container spacing={2}align= 'center'>
+           <Grid item xs={12}sm={12}xl={12}> 
+            
+             <ComplexGridd/>
+             </Grid>
+            </Grid>
             <FullWidthGrid/>
             
             

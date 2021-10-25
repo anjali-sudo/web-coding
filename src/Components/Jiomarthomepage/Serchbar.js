@@ -13,7 +13,7 @@ import Grid from '@material-ui/core/Grid';
 import SwipeableTemporaryDrawer from './Leftdrawer';
 import { Link, Router } from "react-router-dom";
 
-// import Logo from '../../Assets/Logo.png'
+import jiologo from '../../Assets/jiologo.png'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -162,10 +162,13 @@ export default function PrimarySearchAppBar() {
             <Grid item xl={6} xs={5}>
 
             <div>
-              <Typography className={classes.title} variant="h6" noWrap>
+              {/* <Typography className={classes.title} variant="h6" noWrap>
                 JioMart
-              </Typography>
-              {/* <img src = {jio-mart-logo} className= "image" alt= "Logo"/> */}
+              </Typography> */}
+              <img src = {jiologo} className= "image" alt= "jiologo" width="100" height="100%"
+/>
+             
+
             </div>
             </Grid>
 
