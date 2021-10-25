@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/web-coding/static/css/main.25351413.chunk.css",
-    "main.js": "/web-coding/static/js/main.8f9d0a91.chunk.js",
-    "main.js.map": "/web-coding/static/js/main.8f9d0a91.chunk.js.map",
+    "main.js": "/web-coding/static/js/main.ea677a5e.chunk.js",
+    "main.js.map": "/web-coding/static/js/main.ea677a5e.chunk.js.map",
     "runtime-main.js": "/web-coding/static/js/runtime-main.459bc2b4.js",
     "runtime-main.js.map": "/web-coding/static/js/runtime-main.459bc2b4.js.map",
-    "static/js/2.ead2bbbe.chunk.js": "/web-coding/static/js/2.ead2bbbe.chunk.js",
-    "static/js/2.ead2bbbe.chunk.js.map": "/web-coding/static/js/2.ead2bbbe.chunk.js.map",
+    "static/js/2.06bb9235.chunk.js": "/web-coding/static/js/2.06bb9235.chunk.js",
+    "static/js/2.06bb9235.chunk.js.map": "/web-coding/static/js/2.06bb9235.chunk.js.map",
     "index.html": "/web-coding/index.html",
     "static/css/main.25351413.chunk.css.map": "/web-coding/static/css/main.25351413.chunk.css.map",
-    "static/js/2.ead2bbbe.chunk.js.LICENSE.txt": "/web-coding/static/js/2.ead2bbbe.chunk.js.LICENSE.txt",
+    "static/js/2.06bb9235.chunk.js.LICENSE.txt": "/web-coding/static/js/2.06bb9235.chunk.js.LICENSE.txt",
     "static/media/Beauty2.b72aeac3.png": "/web-coding/static/media/Beauty2.b72aeac3.png",
     "static/media/Electronics.d04b75ce.png": "/web-coding/static/media/Electronics.d04b75ce.png",
     "static/media/Fashion.30e19d14.png": "/web-coding/static/media/Fashion.30e19d14.png",
@@ -19,13 +19,14 @@
     "static/media/Medicine.620b449f.png": "/web-coding/static/media/Medicine.620b449f.png",
     "static/media/cocacola.dab74640.jpg": "/web-coding/static/media/cocacola.dab74640.jpg",
     "static/media/icecream.a5bbb652.png": "/web-coding/static/media/icecream.a5bbb652.png",
+    "static/media/jiologo.d01c0420.png": "/web-coding/static/media/jiologo.d01c0420.png",
     "static/media/maggi.bec12646.png": "/web-coding/static/media/maggi.bec12646.png",
     "static/media/pepsodent.c7c7b2a6.jpg": "/web-coding/static/media/pepsodent.c7c7b2a6.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.459bc2b4.js",
-    "static/js/2.ead2bbbe.chunk.js",
+    "static/js/2.06bb9235.chunk.js",
     "static/css/main.25351413.chunk.css",
-    "static/js/main.8f9d0a91.chunk.js"
+    "static/js/main.ea677a5e.chunk.js"
   ]
 }
